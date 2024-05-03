@@ -431,7 +431,8 @@ span {
 }
 
 footer {
-    padding: 2rem 9% 2rem;
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
 }
 
 .contact-img.img p {

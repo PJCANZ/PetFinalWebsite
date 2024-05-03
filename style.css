@@ -394,7 +394,6 @@ section.about-projects {
 
 section.about-firstprojects {
     min-height: 0;
-    padding: 0rem 9% 10rem;
 }
 
 
@@ -547,9 +546,6 @@ footer {
         }
         section {
             padding: 10rem 3% 2rem;
-            .services {
-                padding-bottom: 7rem;
-            }
         }
         footer {
             padding: 2rem 3%;

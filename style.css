@@ -598,6 +598,9 @@ footer {
             width: 56vw;
             margin-top: -2rem;
         }
+        .about-firstprojects {
+            flex-direction: column-reverse;
+        }
         .about {
             flex-direction: column-reverse;
         }

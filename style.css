@@ -103,6 +103,7 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 10rem;
+    font-size: 2rem;
 }
 
 
@@ -304,7 +305,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 35rem;
     background: var(--second-bg-color);
     color: white;
 }
@@ -346,7 +347,7 @@ span {
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 2rem 0 3rem;
 }
 
@@ -381,7 +382,7 @@ span {
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 10rem;
+    gap: 35rem;
     background: var(--second-bg-color);
     color: white;
     min-height: none;
@@ -406,7 +407,7 @@ section.about-firstprojects {
 }
 
 .dropdown .dropdown-toggle {
-    padding: 16px;
+    padding: 14px;
     text-decoration: none;
     display: flex;
 }
@@ -440,6 +441,7 @@ section.about-firstprojects {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    min-height: 70vh;
 }
 
 .contact-content {
@@ -460,8 +462,8 @@ section.about-firstprojects {
 }
 
 footer {
-    min-height: 100vh;
-    padding: 10rem 9% 10rem;
+    text-align: center;
+    padding: 2rem 3%;
 }
 
 .contact-img.img p {
@@ -478,6 +480,66 @@ footer {
 .contact-img.img p:hover {
     color: red;
     /* Change color on hover */
+}
+
+.stars {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.stars label:hover,
+.stars label:hover~label {
+    color: var(--main-color)
+}
+
+.stars input[type="radio"]:checked~label {
+    color: var(--main-color)
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--second-bg-color);
+}
+
+.review .stars {
+    font-size: 20px;
+}
+
+.review-panel {
+    flex: 1;
+    display: grid;
+    justify-content: space-around
+}
+
+.contact-section {
+    min-height: 0vh;
+    padding: 10rem 9% 10rem;
+    background-color: #f2f2f2;
+    /* Light gray background color */
+    text-align: center;
+    /* Center-align content */
+}
+
+.review-list {
+    max-height: 300px;
+    /* Set a maximum height */
+    overflow-y: auto;
+    /* Enable vertical scrollbar */
 }
 
 

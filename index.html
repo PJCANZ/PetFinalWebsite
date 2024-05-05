@@ -39,10 +39,17 @@
                 </ul>
             </div>
 
-
-
             <div class="dropdown">
-                <a href="#review" class="dropdown-toggle">Reviews</a></div>
+                <a href="#review" class="dropdown-toggle">Review</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#review">Reviews</a></li>
+                    <li><a href="#feedback">Give A Feedback</a></li>
+
+                </ul>
+            </div>
+
+
+
 
             <div class="dropdown">
                 <a href="#contacts" class="dropdown-toggle">Contacts</a></div>
@@ -177,8 +184,16 @@
 
     <section class="review" id="review">
         <section style="font-size: 2rem">
-            <div class="review-panel">
-                <h2>Reviews</h2>
+
+
+            <div class="reviews">
+                <h2 class="heading"> Reviews</h2>
+                <div id="reviewList" class="review-list"></div>
+
+            </div>
+
+            <div class="review-panel" id="feedback">
+                <h2>Give A <span>Feedback</span></h2>
                 <br>
                 <br>
                 <label for="username">Username:</label>
@@ -186,6 +201,7 @@
                 <input type="text" id="username" style="font-size: 2rem;">
                 <br>
                 <br>
+
                 <div class="stars">
                     <input type="radio" name="rating" id="star5" value="5">
                     <label for="star5">★</label>
@@ -202,12 +218,8 @@
                 <textarea id="comment" rows="4" cols="50" style="font-size: 2rem;"></textarea>
                 <br>
                 <br>
-                <button onclick="submitReview()" style="font-size: 2rem;">Submit Review</button>
-            </div>
-
-            <div class="reviews">
-                <h2>Reviews</h2>
-                <div id="reviewList" class="review-list"></div>
+                <button onclick="submitReview()" style="font-size: 2rem; background-color: var(--main-color);
+                padding: 10px;">Submit Review</button>
             </div>
         </section>
     </section>

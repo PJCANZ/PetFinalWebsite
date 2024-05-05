@@ -24,7 +24,18 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-// Function to display reviews from user.txt
+// Function to save review to localStorage
+function saveReview(rating, comment, username) {
+    var reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviews.push({
+        rating: rating,
+        comment: comment,
+        username: '-' + username // Prepend a hyphen "-" to the username
+    });
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+}
+
+// Function to display reviews from localStorage
 function displayReviews() {
     // Load reviews from user.txt
     fetch('user.txt')
@@ -71,3 +82,23 @@ function displayReviews() {
             console.error('Error fetching reviews:', error);
         });
 }
+// Function to handle review submission
+function submitReview() {
+    var rating = document.querySelector('input[name="rating"]:checked');
+    var comment = document.getElementById('comment').value;
+    var username = document.getElementById('username').value;
+
+    if (rating && comment && username) {
+        saveReview(rating.value, comment, username);
+        displayReviews();
+        // Reset the form after submission
+        document.querySelector('input[name="rating"]:checked').checked = false;
+        document.getElementById('comment').value = '';
+        document.getElementById('username').value = ''; // Clear the username input field
+    } else {
+        alert('Please select a rating, provide a comment, and enter your username.');
+    }
+}
+
+// Display existing reviews on page load
+displayReviews();

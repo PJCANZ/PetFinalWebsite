@@ -523,7 +523,8 @@ footer {
 .review-panel {
     flex: 1;
     display: grid;
-    justify-content: space-around
+    justify-content: space-around;
+    padding: 15rem;
 }
 
 .contact-section {
@@ -540,6 +541,7 @@ footer {
     /* Set a maximum height */
     overflow-y: auto;
     /* Enable vertical scrollbar */
+    margin-bottom: 20rem;
 }
 
 

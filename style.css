@@ -494,7 +494,8 @@
                     flex: 1;
                     display: grid;
                     justify-content: space-around;
-                    padding: 15rem;
+                    padding-top: 15rem;
+                    padding-bottom: 15rem;
                 }
                 
                 .contact-section {
@@ -566,7 +567,6 @@
                         flex: 1;
                         display: grid;
                         justify-content: space-around;
-                        padding: 0rem;
                     }
                     @media(max-width:1285px) {
                         html {

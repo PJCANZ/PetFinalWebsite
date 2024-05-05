@@ -562,10 +562,11 @@
                     .section {
                         min-height: none;
                     }
-                    @media(max-width:320px) {
-                        .review-panel {
-                            padding: 0rem;
-                        }
+                    .review-panel {
+                        flex: 1;
+                        display: grid;
+                        justify-content: space-around;
+                        padding: 0rem;
                     }
                     @media(max-width:1285px) {
                         html {
